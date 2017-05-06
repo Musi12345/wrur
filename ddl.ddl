@@ -33,6 +33,13 @@ CREATE
   ) ;
 ALTER TABLE Reservation ADD CONSTRAINT Reservation_PK PRIMARY KEY ( res_id ) ;
 
-
+CREATE
+  TABLE Room
+  (
+    r_id             INTEGER NOT NULL ,
+    r_price          INTEGER ,
+    Room_Type_r_t_id INTEGER NOT NULL
+  ) ;
+ALTER TABLE Room ADD CONSTRAINT Room_PK PRIMARY KEY ( r_id ) ;
 
 
