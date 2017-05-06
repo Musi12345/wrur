@@ -50,4 +50,12 @@ CREATE
   ) ;
 ALTER TABLE Room_Type ADD CONSTRAINT Room_Type_PK PRIMARY KEY ( r_t_id ) ;
 
-
+CREATE
+  TABLE Staff
+  (
+    s_id INTEGER NOT NULL ,
+    s_name NVARCHAR2 (40) ,
+    s_phone_number NVARCHAR2 (40) ,
+    Positions_p_id INTEGER NOT NULL
+  ) ;
+ALTER TABLE Staff ADD CONSTRAINT Staff_PK PRIMARY KEY ( s_id ) ;
