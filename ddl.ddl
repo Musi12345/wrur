@@ -20,3 +20,19 @@ CREATE
     p_position NVARCHAR2 (40)
   ) ;
 ALTER TABLE Positions ADD CONSTRAINT Positions_PK PRIMARY KEY ( p_id ) ;
+
+CREATE
+  TABLE Reservation
+  (
+    res_id      INTEGER NOT NULL ,
+    res_date    DATE ,
+    res_by_date DATE ,
+    Client_c_id INTEGER NOT NULL ,
+    Staff_s_id  INTEGER NOT NULL ,
+    Room_r_id   INTEGER NOT NULL
+  ) ;
+ALTER TABLE Reservation ADD CONSTRAINT Reservation_PK PRIMARY KEY ( res_id ) ;
+
+
+
+
