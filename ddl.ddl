@@ -42,4 +42,12 @@ CREATE
   ) ;
 ALTER TABLE Room ADD CONSTRAINT Room_PK PRIMARY KEY ( r_id ) ;
 
+CREATE
+  TABLE Room_Type
+  (
+    r_t_id INTEGER NOT NULL ,
+    r_t_type NVARCHAR2 (50)
+  ) ;
+ALTER TABLE Room_Type ADD CONSTRAINT Room_Type_PK PRIMARY KEY ( r_t_id ) ;
+
 
