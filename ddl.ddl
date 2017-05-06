@@ -13,4 +13,10 @@ CREATE
   ) ;
 ALTER TABLE Client ADD CONSTRAINT Client_PK PRIMARY KEY ( c_id ) ;
 
-
+CREATE
+  TABLE Positions
+  (
+    p_id INTEGER NOT NULL ,
+    p_position NVARCHAR2 (40)
+  ) ;
+ALTER TABLE Positions ADD CONSTRAINT Positions_PK PRIMARY KEY ( p_id ) ;
