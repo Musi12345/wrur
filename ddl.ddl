@@ -59,3 +59,18 @@ CREATE
     Positions_p_id INTEGER NOT NULL
   ) ;
 ALTER TABLE Staff ADD CONSTRAINT Staff_PK PRIMARY KEY ( s_id ) ;
+
+ALTER TABLE Reservation ADD CONSTRAINT Reservation_Client_FK FOREIGN KEY (
+Client_c_id ) REFERENCES Client ( c_id ) ;
+
+ALTER TABLE Reservation ADD CONSTRAINT Reservation_Room_FK FOREIGN KEY (
+Room_r_id ) REFERENCES Room ( r_id ) ;
+
+ALTER TABLE Reservation ADD CONSTRAINT Reservation_Staff_FK FOREIGN KEY (
+Staff_s_id ) REFERENCES Staff ( s_id ) ;
+
+ALTER TABLE Room ADD CONSTRAINT Room_Room_Type_FK FOREIGN KEY (
+Room_Type_r_t_id ) REFERENCES Room_Type ( r_t_id ) ;
+
+ALTER TABLE Staff ADD CONSTRAINT Staff_Positions_FK FOREIGN KEY (
+Positions_p_id ) REFERENCES Positions ( p_id ) ;
